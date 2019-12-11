@@ -69,6 +69,10 @@ SENTRY_LOGGING = LoggingIntegration(
 
 def format_message(filing_id, payment_id, status):
     return {
+        'filing' : {
+           'id' : filing_id,
+           'status' : status
+           },
         'statusChanged' : {
             'id' : filing_id,
             'newStatus' : status
